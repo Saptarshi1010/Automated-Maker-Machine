@@ -13,7 +13,7 @@ describe("Constant Product AMM Test Suite", async () => {
         let B = await ethers.getContractFactory('TokenB')
         tokenB = await B.deploy()
 
-        let swap = await ethers.getContractFactory('AnyxSwapCP')
+        let swap = await ethers.getContractFactory('Swap')
         amm = await swap.deploy(tokenA.address, tokenB.address)
     })
 
