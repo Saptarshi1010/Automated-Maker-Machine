@@ -11,7 +11,7 @@ describe("✚ Constant Sum AMM Unit Testing ✚", async () => {
         tokenA = await A.deploy()
         let B = await ethers.getContractFactory('TokenB')
         tokenB = await B.deploy()
-        let csamm = await ethers.getContractFactory('AnyxSwapCS')
+        let csamm = await ethers.getContractFactory('Swap')
         amm = await csamm.deploy(tokenA.address, tokenB.address)
 
         await tokenA.mint(alice.address, 1000)
